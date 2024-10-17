@@ -1,16 +1,78 @@
+<!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min første webside</title>
-<head>
-<body>
-    <h1>Velkommen til min første webside</h1>
-    <p>Her er en liste over mine favorittfilmer:</p>
-    <ul>
-        <li>Star Wars</li>
-        <li>Indiana Jones</li>
-        <li>Back to the Future</li>
-    </ul>
-</body>
-</html>    
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personlig Trener - Hjem</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Personlig Trener - Din vei til bedre helse</h1>
+
+      <nav>
+        <ul>
+          <button>
+            <a href="/index/index.html">Hjem</a>
+          </button>
+          <button>
+            <a href="/booking/index.html">Bestill Time</a>
+          </button>
+          <button><a href="/about/index.html">Om Meg</a></button>
+          <button><a href="/courses/index.html">Kursoversikt</a></button>
+          <button><a href="/contact/index.html">Kontakt</a></button>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="welcome">
+      <h2>Velkommen</h2>
+      <p>
+        Velkommen til min personlige treningsside! Jeg er her for å hjelpe deg
+        med å nå dine treningsmål, enten du er nybegynner eller erfaren.
+      </p>
+    </section>
+    <section id="calendar">
+      <h2>Kalender - Opptatte dager</h2>
+      <div id="calendar"></div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          locale: "nb",
+          events: [
+            {
+              title: "Opptatt",
+              start: "2024-10-10",
+              allDay: true,
+            },
+            {
+              title: "Opptatt",
+              start: "2024-10-15",
+              allDay: true,
+            },
+            {
+              title: "Opptatt",
+              start: "2024-10-20",
+              allDay: true,
+            },
+          ],
+        });
+        calendar.render();
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2024 Personlig Trener. Alle rettigheter reservert.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
