@@ -1,0 +1,60 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personlig Trener - Kontakt</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kontakt</h1>
+      <nav>
+        <ul>
+          <button>
+            <a href="/PTwebsite/index.html">Hjem</a>
+          </button>
+          <button>
+            <a href="/booking/index.html">Bestill Time</a>
+          </button>
+          <button><a href="/PTwebsite/about.html">Om Meg</a></button>
+          <button><a href="/courses/index.html">Kursoversikt</a></button>
+          <button><a href="/PTwebsite/contact.html">Kontakt</a></button>
+        </ul>
+      </nav>
+    </header>
+
+    
+      <section id="contact">
+        <h2>Kontaktinformasjon</h2>
+        <p>Du finner PT Hanna på Risør Treningssenter (Se kart under)</p>
+        <p>E-post: <a href="mailto:Hanna@PT.no">Hanna@PTtrener.no</a>
+          <br>Telefon: 123 45 678 (Tilgjengelig fra 08-14 Mandag-Fredag)</p>
+        <div id="map" style="width:100%;height:400px;"></div>
+        
+    </section>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = { lat: 59.911491, lng: 10.757933 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Personlig Trener. Alle rettigheter reservert.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+
+  </body>
+</html>
