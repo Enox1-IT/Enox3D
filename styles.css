@@ -1,4 +1,4 @@
-/* styles.css */
+/* Redesignet styles.css for bedre mobilvennlighet og synlighet */
 
 /* Generelle stiler for hele nettstedet */
 body {
@@ -11,12 +11,13 @@ body {
 }
 
 header {
-    background-image: url("../images/header1.jpg");
+    background: url('../images/header1.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
     position: relative;
     padding: 100px 20px;
+    height: 100px;
 }
 
 header h1 {
@@ -25,39 +26,87 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%); /* Sentrer teksten */
     z-index: 1;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+.header-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
+.header-buttons a {
+    background-color: #66b3ff; /* Lysere blå farge for standard tilstand */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.header-buttons a:hover {
+    background-color: #0056b3; /* Mørkere blå ved hover */
+}
+
+/* Navigasjon med mobilvennlig design */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    position: relative;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px 0;
+    text-align: center;
 }
 
 nav ul li a {
+    background-color: #66b3ff;
     color: white;
     text-decoration: none;
+    border-radius: 4px;
     font-weight: bold;
+    padding: 15px;
+    display: block;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #004494;
 }
 
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+}
+
+/* Seksjoner med forbedret layout */
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background-color: #66b3ff; /* Endret til lysere blå farge for likhet med Bestill Time og Se Våre Kurs */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Formstiler for bedre brukervennlighet */
 form {
     display: flex;
     flex-direction: column;
@@ -77,27 +126,33 @@ form input, form textarea, form button {
     border: 1px solid #ccc;
 }
 
+form input, form textarea {
+    font-size: 1em;
+}
+
 form button {
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 form button:hover {
     background-color: #0056b3;
 }
 
+/* Footer-stil med bedre synlighet */
 footer {
     background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     width: 100%;
 }
 
-/* Nyttige tilleggsstiler */
+/* Tilleggsstiler for knapper og kort */
 .button-secondary {
     background-color: #6c757d;
     color: white;
@@ -107,6 +162,7 @@ footer {
     text-decoration: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .button-secondary:hover {
@@ -114,7 +170,7 @@ footer {
 }
 
 .card {
-    background-color: white;
+    background-color: #66b3ff; /* Endret til lysere blå farge for kort */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -128,4 +184,44 @@ footer {
 
 .card h3 {
     margin-top: 0;
+    font-weight: bold;
+}
+
+/* Media queries for mobilvennlighet */
+@media (max-width: 767px) {
+    header {
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        top: 15%;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }
