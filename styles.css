@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-image: src=('images/header1.jpg') no-repeat center center;
+    background-image: url("../images/header1.jpg");
     background-size: cover;
     color: white;
     text-align: center;
