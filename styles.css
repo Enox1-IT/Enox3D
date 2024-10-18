@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-image: url('header1.jpg') no-repeat center center;
+    background: url('../images/header1.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
@@ -21,7 +21,7 @@ header {
 
 header h1 {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -189,6 +189,19 @@ footer {
 
 /* Media queries for mobilvennlighet */
 @media (max-width: 767px) {
+    header {
+        padding: 80px 20px;
+    }
+
+    header h1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 2em;
+        text-align: center;
+        width: 100%;
+    }
     header {
         padding: 60px 20px;
     }
