@@ -1,78 +1,62 @@
 <!DOCTYPE html>
 <html lang="no">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personlig Trener - Hjem</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
     <header>
-      <h1>Personlig Trener - Din vei til bedre helse</h1>
-
-      <nav>
-        <ul>
-          <button>
-            <a href="/PTwebsite/index.html">Hjem</a>
-          </button>
-          <!--<button>
-            <a href="/PTwebsite/index.html">Bestill Time</a>
-          </button>-->
-          <button><a href="/PTwebsite/about.html">Om Meg</a></button>
-          <!--<button><a href="/PTwebsite/index.html">Kursoversikt</a></button>-->
-          <button><a href="/PTwebsite/contact.html">Kontakt</a></button>
-        </ul>
-      </nav>
+      <h1>Velkommen til Personlig Trening</h1>
+      <div class="header-buttons">
+        <a href="/booking/index.html">Bestill Time</a>
+        <a href="/courses/index.html">Se Våre Kurs</a>
+      </div>
     </header>
 
-    <section id="welcome">
-      <h2>Velkommen</h2>
-      <p>
-        Velkommen til min personlige treningsside! Jeg er her for å hjelpe deg
-        med å nå dine treningsmål, enten du er nybegynner eller erfaren.
-      </p>
-    </section>
-    <section id="calendar">
-      <h2>Kalender - Opptatte dager</h2>
-      <div id="calendar"></div>
+    <nav>
+      <ul>
+        <li><a href="/index/index.html">Hjem</a></li>
+
+        <li><a href="/about/index.html">Om Meg</a></li>
+
+        <li><a href="/contact/index.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="intro">
+        <h2>Din Vei til Et Sunnere Liv</h2>
+        <p>
+          Velkommen til din personlige trener, hvor vi hjelper deg med å oppnå
+          dine treningsmål. Enten du ønsker å gå ned i vekt, bygge muskler,
+          eller bare holde deg i form, er vi her for å støtte deg hele veien.
+          Våre trenere er dedikerte, erfarne, og klare til å tilpasse treningen
+          etter dine behov.
+        </p>
+        <img
+          src="../images/header.jpg"
+          alt="Trening i aksjon"
+          style="width: 100%; height: auto; margin-top: 20px"
+        />
+      </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          locale: "nb",
-          events: [
-            {
-              title: "Opptatt",
-              start: "2024-10-10",
-              allDay: true,
-            },
-            {
-              title: "Opptatt",
-              start: "2024-10-15",
-              allDay: true,
-            },
-            {
-              title: "Opptatt",
-              start: "2024-10-20",
-              allDay: true,
-            },
-          ],
-        });
-        calendar.render();
-      });
-    </script>
+    <section>
+      <div class="benefits">
+        <h2>Hvorfor Velge Oss?</h2>
+        <ul>
+          <li>Skreddersydde treningsprogrammer som passer din livsstil.</li>
+          <li>Erfarne trenere som gir deg støtte og motivasjon.</li>
+          <li>Fleksible timebestillinger som passer din timeplan.</li>
+          <li>Gruppetreninger og personlige økter tilgjengelige.</li>
+        </ul>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2024 Personlig Trener. Alle rettigheter reservert.</p>
     </footer>
-    <script src="../js/script.js"></script>
   </body>
 </html>
