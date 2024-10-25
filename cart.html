@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handlekurv</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Handlekurv</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="products.html">Produkter</a></li>
+          <li><a href="services.html">Tjenester</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li>
+            <a href="cart.html"
+              ><img src="cart-icon.png" alt="Handlekurv" />
+              <span id="cart-count">0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Din handlekurv</h2>
+        <div class="cart-grid" id="cartItems"></div>
+        <button onclick="clearCart()">Tøm handlekurven</button>
+        <button onclick="window.location.href='checkout.html'">
+          Gå til betaling
+        </button>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024 Vegårshei 3D Print Service. Alle rettigheter forbeholdt.
+      </p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

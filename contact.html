@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt oss</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kontakt oss</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="products.html">Produkter</a></li>
+          <li><a href="services.html">Tjenester</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li>
+            <a href="cart.html"
+              ><img src="cart-icon.png" alt="Handlekurv" />
+              <span id="cart-count">0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2 class="centered">Ta kontakt med oss</h2>
+        <p class="centered">
+          Har du spørsmål om våre produkter eller tjenester? Send oss en
+          melding!
+        </p>
+        <form action="send_email.php" method="post">
+          <label for="name">Navn:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">E-post:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Melding:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send melding</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 3D Print Shop. Alle rettigheter forbeholdt.</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
