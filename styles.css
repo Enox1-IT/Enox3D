@@ -146,7 +146,7 @@ section p {
 .product-image {
     width: 200px;  /* Juster til ønsket bredde */
     height: 200px;  /* Juster til ønsket høyde */
-    object-fit: ;
+    object-fit: cover;
     display: block;
     margin: auto;
 }
