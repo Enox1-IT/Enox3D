@@ -143,6 +143,63 @@ section p {
     border-radius: 5px;
 }
 
+.product-image {
+    width: 200px;  /* Juster til ønsket bredde */
+    height: 200px;  /* Juster til ønsket høyde */
+    object-fit: ;
+    display: block;
+    margin: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 /* cart.html */
 
 .cart-grid {
@@ -154,8 +211,8 @@ section p {
 
 .cart-item {
     background: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 2px solid #ccc;
+    padding: 20px;
     text-align: center;
     border-radius: 5px;
     display: flex;
@@ -176,4 +233,45 @@ section p {
     margin-bottom: 10px;
 }
 
+#total-sum {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.cart-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-buttons button {
+    margin: 5px;
+    padding: 20px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-buttons button:hover {
+    background-color: #555;
+}
+
+.cart-product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.cart-item p {
+    margin: 10px 0; /* Legger til mellomrom mellom linjene */
+}
