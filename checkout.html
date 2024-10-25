@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Betaling</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
     <header>
@@ -27,8 +28,7 @@
     <main>
       <section>
         <h2>Betalingsinformasjon</h2>
-        <!-- Her kan du legge inn betalingsskjema eller instruksjoner -->
-        <p>Vennligst legg inn dine betalingsdetaljer for å fullføre kjøpet.</p>
+        <button id="checkout-button">Gå til betaling</button>
       </section>
     </main>
     <footer>
@@ -36,5 +36,23 @@
         &copy; 2024 Vegårshei 3D Print Service. Alle rettigheter forbeholdt.
       </p>
     </footer>
+    <script>
+      const stripe = Stripe("YOUR_STRIPE_PUBLIC_KEY");
+      const checkoutButton = document.getElementById("checkout-button");
+
+      checkoutButton.addEventListener("click", async () => {
+        const response = await fetch("/create-checkout-session", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            items: [{ id: "prod_1", quantity: 1 }],
+          }),
+        });
+        const session = await response.json();
+        await stripe.redirectToCheckout({ sessionId: session.id });
+      });
+    </script>
   </body>
 </html>
